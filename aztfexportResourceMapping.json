@@ -1,447 +1,92 @@
 {
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMClientApps/providers/microsoft.alertsmanagement/smartDetectorAlertRules/Failure Anomalies - lta-matchmakersoftware": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMClientApps/providers/Microsoft.AlertsManagement/smartDetectorAlertRules/Failure Anomalies - lta-matchmakersoftware",
-		"resource_type": "azurerm_monitor_smart_detector_alert_rule",
+	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01": {
+		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01",
+		"resource_type": "azurerm_resource_group",
 		"resource_name": "res-0"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMClientApps/providers/microsoft.insights/components/lta-matchmakersoftware": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMClientApps/providers/Microsoft.Insights/components/lta-matchmakersoftware",
-		"resource_type": "azurerm_application_insights",
-		"resource_name": "res-1"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.KeyVault/vaults/AZMMKV01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.KeyVault/vaults/AZMMKV01",
 		"resource_type": "azurerm_key_vault",
-		"resource_name": "res-2"
+		"resource_name": "res-1"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.KeyVault/vaults/AZMMKV01/certificates/MMWildcardKV2024": {
 		"resource_id": "https://azmmkv01.vault.azure.net/certificates/MMWildcardKV2024/e1fac60ef8e54c1bba8d835bd1fb0d52",
 		"resource_type": "azurerm_key_vault_certificate",
-		"resource_name": "res-3"
+		"resource_name": "res-2"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/AppGWManagedID": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/AppGWManagedID",
 		"resource_type": "azurerm_user_assigned_identity",
-		"resource_name": "res-4"
+		"resource_name": "res-3"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/applicationGateways/AZMMAGW01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/applicationGateways/AZMMAGW01",
 		"resource_type": "azurerm_application_gateway",
-		"resource_name": "res-5"
+		"resource_name": "res-4"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
 		"resource_type": "azurerm_private_dns_zone",
-		"resource_name": "res-6"
+		"resource_name": "res-5"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/virtualNetworkLinks/mp2zoxnjsbkyw": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/virtualNetworkLinks/mp2zoxnjsbkyw",
 		"resource_type": "azurerm_private_dns_zone_virtual_network_link",
-		"resource_name": "res-7"
+		"resource_name": "res-6"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/privateEndpoints/AZMMSQL01PEP01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/privateEndpoints/AZMMSQL01PEP01",
 		"resource_type": "azurerm_private_endpoint",
-		"resource_name": "res-8"
+		"resource_name": "res-7"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/publicIPAddresses/AZMMAGW01PIP": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/publicIPAddresses/AZMMAGW01PIP",
 		"resource_type": "azurerm_public_ip",
-		"resource_name": "res-9"
+		"resource_name": "res-8"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01",
 		"resource_type": "azurerm_virtual_network",
-		"resource_name": "res-10"
+		"resource_name": "res-9"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01/subnets/AGWSNET01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01/subnets/AGWSNET01",
 		"resource_type": "azurerm_subnet",
-		"resource_name": "res-11"
+		"resource_name": "res-10"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01/subnets/AppSNET01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01/subnets/AppSNET01",
 		"resource_type": "azurerm_subnet",
-		"resource_name": "res-12"
+		"resource_name": "res-11"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01/subnets/SQLSNET01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01/subnets/SQLSNET01",
 		"resource_type": "azurerm_subnet",
-		"resource_name": "res-13"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01",
-		"resource_type": "azurerm_mssql_server",
-		"resource_name": "res-14"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/15886": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/15886",
-		"resource_type": "azurerm_mssql_database",
-		"resource_name": "res-24"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/15886/extendedAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/15886/extendedAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_database_extended_auditing_policy",
-		"resource_name": "res-35"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17008": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17008",
-		"resource_type": "azurerm_mssql_database",
-		"resource_name": "res-41"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17008/extendedAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17008/extendedAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_database_extended_auditing_policy",
-		"resource_name": "res-52"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17009": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17009",
-		"resource_type": "azurerm_mssql_database",
-		"resource_name": "res-58"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17009/extendedAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/17009/extendedAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_database_extended_auditing_policy",
-		"resource_name": "res-69"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/2179": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/2179",
-		"resource_type": "azurerm_mssql_database",
-		"resource_name": "res-75"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/2179/extendedAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/2179/extendedAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_database_extended_auditing_policy",
-		"resource_name": "res-86"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/kairos_installdb": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/kairos_installdb",
-		"resource_type": "azurerm_mssql_database",
-		"resource_name": "res-92"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/kairos_installdb/extendedAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/kairos_installdb/extendedAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_database_extended_auditing_policy",
-		"resource_name": "res-98"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/master/extendedAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/databases/master/extendedAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_database_extended_auditing_policy",
-		"resource_name": "res-107"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/devOpsAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/devOpsAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_server_microsoft_support_auditing_policy",
-		"resource_name": "res-113"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/encryptionProtector/current": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/encryptionProtector/current",
-		"resource_type": "azurerm_mssql_server_transparent_data_encryption",
-		"resource_name": "res-114"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/extendedAuditingSettings/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/extendedAuditingSettings/Default",
-		"resource_type": "azurerm_mssql_server_extended_auditing_policy",
-		"resource_name": "res-115"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/firewallRules/ClientIPAddress_2024-2-19_13-31-2": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/firewallRules/ClientIPAddress_2024-2-19_13-31-2",
-		"resource_type": "azurerm_mssql_firewall_rule",
-		"resource_name": "res-116"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/firewallRules/MatchMakerIP": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/firewallRules/MatchMakerIP",
-		"resource_type": "azurerm_mssql_firewall_rule",
-		"resource_name": "res-117"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/securityAlertPolicies/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/securityAlertPolicies/Default",
-		"resource_type": "azurerm_mssql_server_security_alert_policy",
-		"resource_name": "res-120"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/vulnerabilityAssessments/Default": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Sql/servers/azmmsql01/vulnerabilityAssessments/Default",
-		"resource_type": "azurerm_mssql_server_vulnerability_assessment",
-		"resource_name": "res-122"
+		"resource_name": "res-12"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Web/serverFarms/AZMMASP01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Web/serverFarms/AZMMASP01",
 		"resource_type": "azurerm_service_plan",
-		"resource_name": "res-123"
+		"resource_name": "res-13"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/microsoft.alertsmanagement/smartDetectorAlertRules/Failure Anomalies - AZMMApp01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.AlertsManagement/smartDetectorAlertRules/Failure Anomalies - AZMMApp01",
 		"resource_type": "azurerm_monitor_smart_detector_alert_rule",
-		"resource_name": "res-124"
+		"resource_name": "res-14"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/microsoft.insights/actiongroups/Application Insights Smart Detection": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Insights/actionGroups/Application Insights Smart Detection",
 		"resource_type": "azurerm_monitor_action_group",
-		"resource_name": "res-125"
+		"resource_name": "res-15"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/microsoft.insights/components/AZMMApp01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Insights/components/AZMMApp01",
 		"resource_type": "azurerm_application_insights",
-		"resource_name": "res-126"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU",
-		"resource_type": "azurerm_log_analytics_workspace",
-		"resource_name": "res-127"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|AlphabeticallySortedComputers": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|AlphabeticallySortedComputers",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-128"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|StaleComputers": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|StaleComputers",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-129"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|dataPointsPerManagementGroup": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|dataPointsPerManagementGroup",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-130"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|dataTypeDistribution": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_General|dataTypeDistribution",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-131"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllEvents": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllEvents",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-132"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslog": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslog",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-133"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslogByFacility": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslogByFacility",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-134"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslogByProcessName": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslogByProcessName",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-135"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslogsWithErrors": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AllSyslogsWithErrors",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-136"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AverageHTTPRequestTimeByClientIPAddress": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AverageHTTPRequestTimeByClientIPAddress",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-137"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AverageHTTPRequestTimeHTTPMethod": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|AverageHTTPRequestTimeHTTPMethod",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-138"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountIISLogEntriesClientIPAddress": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountIISLogEntriesClientIPAddress",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-139"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountIISLogEntriesHTTPRequestMethod": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountIISLogEntriesHTTPRequestMethod",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-140"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountIISLogEntriesHTTPUserAgent": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountIISLogEntriesHTTPUserAgent",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-141"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfIISLogEntriesByHostRequestedByClient": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfIISLogEntriesByHostRequestedByClient",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-142"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfIISLogEntriesByURLForHost": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfIISLogEntriesByURLForHost",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-143"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfIISLogEntriesByURLRequestedByClient": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfIISLogEntriesByURLRequestedByClient",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-144"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfWarningEvents": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|CountOfWarningEvents",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-145"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|DisplayBreakdownRespondCodes": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|DisplayBreakdownRespondCodes",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-146"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsByEventLog": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsByEventLog",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-147"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsByEventSource": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsByEventSource",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-148"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsByEventsID": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsByEventsID",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-149"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsInOMBetween2000to3000": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsInOMBetween2000to3000",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-150"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsWithStartedinEventID": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|EventsWithStartedinEventID",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-151"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|FindMaximumTimeTakenForEachPage": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|FindMaximumTimeTakenForEachPage",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-152"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|IISLogEntriesForClientIP": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|IISLogEntriesForClientIP",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-153"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|ListAllIISLogEntries": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|ListAllIISLogEntries",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-154"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|NoOfConnectionsToOMSDKService": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|NoOfConnectionsToOMSDKService",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-155"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|ServerRestartTime": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|ServerRestartTime",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-156"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|Show404PagesList": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|Show404PagesList",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-157"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|ShowServersThrowingInternalServerError": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|ShowServersThrowingInternalServerError",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-158"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesReceivedByEachAzureRoleInstance": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesReceivedByEachAzureRoleInstance",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-159"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesReceivedByEachIISComputer": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesReceivedByEachIISComputer",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-160"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesRespondedToClientsByClientIPAddress": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesRespondedToClientsByClientIPAddress",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-161"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesRespondedToClientsByEachIISServerIPAddress": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesRespondedToClientsByEachIISServerIPAddress",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-162"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesSentByClientIPAddress": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|TotalBytesSentByClientIPAddress",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-163"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|WarningEvents": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|WarningEvents",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-164"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|WindowsFireawallPolicySettingsChanged": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|WindowsFireawallPolicySettingsChanged",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-165"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|WindowsFireawallPolicySettingsChangedByMachines": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU/savedSearches/LogManagement(DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU)_LogManagement|WindowsFireawallPolicySettingsChangedByMachines",
-		"resource_type": "azurerm_log_analytics_saved_search",
-		"resource_name": "res-166"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_northeurope": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_northeurope",
-		"resource_type": "azurerm_network_watcher",
-		"resource_name": "res-694"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/certificates/AZMMKV01-MMWildcardKV2024": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/certificates/AZMMKV01-MMWildcardKV2024",
-		"resource_type": "azurerm_app_service_certificate",
-		"resource_name": "res-695"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/applehealth-matchmakersoftware": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/applehealth-matchmakersoftware",
-		"resource_type": "azurerm_windows_web_app",
-		"resource_name": "res-696"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/applehealth-matchmakersoftware/hostNameBindings/applehealth-matchmakersoftware.azurewebsites.net": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/applehealth-matchmakersoftware/hostNameBindings/applehealth-matchmakersoftware.azurewebsites.net",
-		"resource_type": "azurerm_app_service_custom_hostname_binding",
-		"resource_name": "res-701"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/applehealth-matchmakersoftware/hostNameBindings/applehealth.matchmakersoftware.com": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/applehealth-matchmakersoftware/hostNameBindings/applehealth.matchmakersoftware.com",
-		"resource_type": "azurerm_app_service_custom_hostname_binding",
-		"resource_name": "res-702"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/dt-matchmakersoftware": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/dt-matchmakersoftware",
-		"resource_type": "azurerm_windows_web_app",
-		"resource_name": "res-870"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/dt-matchmakersoftware/hostNameBindings/dt-matchmakersoftware.azurewebsites.net": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/dt-matchmakersoftware/hostNameBindings/dt-matchmakersoftware.azurewebsites.net",
-		"resource_type": "azurerm_app_service_custom_hostname_binding",
-		"resource_name": "res-875"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/dt-matchmakersoftware/hostNameBindings/dt.matchmakersoftware.com": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/dt-matchmakersoftware/hostNameBindings/dt.matchmakersoftware.com",
-		"resource_type": "azurerm_app_service_custom_hostname_binding",
-		"resource_name": "res-876"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/lta-matchmakersoftware": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/lta-matchmakersoftware",
-		"resource_type": "azurerm_windows_web_app",
-		"resource_name": "res-1044"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/lta-matchmakersoftware/hostNameBindings/lta-matchmakersoftware.azurewebsites.net": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/lta-matchmakersoftware/hostNameBindings/lta-matchmakersoftware.azurewebsites.net",
-		"resource_type": "azurerm_app_service_custom_hostname_binding",
-		"resource_name": "res-1049"
-	},
-	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/lta-matchmakersoftware/hostNameBindings/lta.matchmakersoftware.com": {
-		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmclientapps/providers/Microsoft.Web/sites/lta-matchmakersoftware/hostNameBindings/lta.matchmakersoftware.com",
-		"resource_type": "azurerm_app_service_custom_hostname_binding",
-		"resource_name": "res-1050"
+		"resource_name": "res-16"
 	},
 	"/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmcorerg01/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/A/azmmsql01": {
 		"resource_id": "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmcorerg01/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/A/azmmsql01",
 		"resource_type": "azurerm_private_dns_a_record",
-		"resource_name": "res-1218"
+		"resource_name": "res-17"
 	}
 }
