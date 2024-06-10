@@ -1,9 +1,9 @@
 
-resource "azurerm_windows_web_app" "azmmclientrg-webbapp-rs" {
+resource "azurerm_windows_web_app" "azmmclientrg-webbapp-se" {
   app_settings = {
     APPLICATIONINSIGHTS_CONNECTION_STRING      = "InstrumentationKey=e62501d5-31c1-45f2-a54e-8ea998494ed0;IngestionEndpoint=https://northeurope-2.in.applicationinsights.azure.com/;LiveEndpoint=https://northeurope.livediagnostics.monitor.azure.com/"
     ApplicationInsightsAgent_EXTENSION_VERSION = "~2"
-    MM_DEFAULT_VERSION                         = "mmakerrs"
+    MM_DEFAULT_VERSION                         = "mmakerse"
     MM_EXTENSION_VERSION                       = "n4-UL:g5aHw%et+Wt!r}i%$Hm6q4T%CupX2B8M)ftbco]*!?g%"
     WEBSITE_TIME_ZONE                          = "GMT Standard Time"
     XDT_MicrosoftApplicationInsights_Mode      = "default"
@@ -11,9 +11,9 @@ resource "azurerm_windows_web_app" "azmmclientrg-webbapp-rs" {
   client_affinity_enabled   = true
   https_only                = true
   location                  = "northeurope"
-  name                      = "rs-matchmakersoftware"
+  name                      = "se-matchmakersoftware"
   resource_group_name       = "azmmclientapps"
-  service_plan_id           = "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Web/serverFarms/AZMMASP02"
+  service_plan_id           = "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Web/serverFarms/AZMMASP04"
   virtual_network_subnet_id = "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/AZMMCoreRG01/providers/Microsoft.Network/virtualNetworks/AZMMVNET01/subnets/AppSNET01"
   connection_string {
     name  = "mmakerConnString"
@@ -62,33 +62,34 @@ resource "azurerm_windows_web_app" "azmmclientrg-webbapp-rs" {
 
 }
 /**
-resource "azurerm_app_service_custom_hostname_binding" "azmmclientrg-custombinding-webapp-rs1" {
-  app_service_name    = "rs-matchmakersoftware"
-  hostname            = "rs-matchmakersoftware.azurewebsites.net"
+resource "azurerm_app_service_custom_hostname_binding" "azmmclientrg-custombinding-webapp-se1" {
+  app_service_name    = "se-matchmakersoftware"
+  hostname            = "se-matchmakersoftware.azurewebsites.net"
   resource_group_name = "azmmclientapps"
 }
 */
 
-resource "azurerm_app_service_custom_hostname_binding" "azmmclientrg-custombinding-webapp-rs2" {
-  app_service_name    = "rs-matchmakersoftware"
-  hostname            = "rs.matchmakersoftware.com"
+resource "azurerm_app_service_custom_hostname_binding" "azmmclientrg-custombinding-webapp-se2" {
+  app_service_name    = "se-matchmakersoftware"
+  hostname            = "se.matchmakersoftware.com"
   resource_group_name = "azmmclientapps"
+  
 }
 
-resource "azurerm_app_service_certificate_binding" "azmmclientrg-custombinding-cert-webapp-rs2" {
-  hostname_binding_id = azurerm_app_service_custom_hostname_binding.azmmclientrg-custombinding-webapp-rs2.id
+resource "azurerm_app_service_certificate_binding" "azmmclientrg-custombinding-cert-webapp-se2" {
+  hostname_binding_id = azurerm_app_service_custom_hostname_binding.azmmclientrg-custombinding-webapp-se2.id
   certificate_id      = azurerm_app_service_certificate.azmmclientrg-365.id
   ssl_state           = "SniEnabled"
 }
 
 
-resource "azurerm_monitor_smart_detector_alert_rule" "azmmclientrg-smartalert-webapp-rs" {
+resource "azurerm_monitor_smart_detector_alert_rule" "azmmclientrg-smartalert-webapp-se" {
   description         = "Failure Anomalies notifies you of an unusual rise in the rate of failed HTTP requests or dependency calls."
   detector_type       = "FailureAnomaliesDetector"
   frequency           = "PT1M"
-  name                = "Failure Anomalies - rs-matchmakersoftware"
+  name                = "Failure Anomalies - se-matchmakersoftware"
   resource_group_name = "AZMMClientApps"
-  scope_resource_ids  = ["/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourcegroups/azmmclientapps/providers/microsoft.insights/components/rs-matchmakersoftware"]
+  scope_resource_ids  = ["/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourcegroups/azmmclientapps/providers/microsoft.insights/components/se-matchmakersoftware"]
   severity            = "Sev3"
   action_group {
     ids = ["/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/azmmcorerg01/providers/Microsoft.Insights/actionGroups/application insights smart detection"]
@@ -97,10 +98,10 @@ resource "azurerm_monitor_smart_detector_alert_rule" "azmmclientrg-smartalert-we
     azurerm_resource_group.azmmclientrg-0,
   ]
 }
-resource "azurerm_application_insights" "azmmclientrg-appinsight-webapp-rs" {
+resource "azurerm_application_insights" "azmmclientrg-appinsight-webapp-se" {
   application_type    = "web"
   location            = "northeurope"
-  name                = "rs-matchmakersoftware"
+  name                = "se-matchmakersoftware"
   resource_group_name = "AZMMClientApps"
   sampling_percentage = 0
   workspace_id        = "/subscriptions/2bd29ed6-34a6-42d7-8235-293e8ee67447/resourceGroups/DefaultResourceGroup-NEU/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-2bd29ed6-34a6-42d7-8235-293e8ee67447-NEU"

@@ -18,6 +18,10 @@ resource "azurerm_application_gateway" "res-4" {
     type         = "UserAssigned"
   }
 
+lifecycle {
+  prevent_destroy = true
+}
+
 sku {
     capacity = 1
     name     = "Standard_v2"
@@ -302,7 +306,159 @@ sku {
 
 #end of rs config
 
+#start of se config
 
+  backend_address_pool {
+    fqdns = ["se-matchmakersoftware.azurewebsites.net"]
+    name  = "se-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "se-backendsetting"
+    port                  = 443
+    probe_name            = "se-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "se.matchmakersoftware.com"
+    name                           = "se-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "se-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "se-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "se-backendpool"
+    backend_http_settings_name = "se-backendsetting"
+    http_listener_name         = "se-listenerhttps"
+    name                       = "se-routingrule"
+    priority                   = 7
+    rule_type                  = "Basic"
+  }
+  
+#end of se config
+
+#start of smile-online config
+
+  backend_address_pool {
+    fqdns = ["smile-online-matchmakersoftware.azurewebsites.net"]
+    name  = "smile-online-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "smile-online-backendsetting"
+    port                  = 443
+    probe_name            = "smile-online-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "smile-online.matchmakersoftware.com"
+    name                           = "smile-online-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "smile-online-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "smile-online-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "smile-online-backendpool"
+    backend_http_settings_name = "smile-online-backendsetting"
+    http_listener_name         = "smile-online-listenerhttps"
+    name                       = "smile-online-routingrule"
+    priority                   = 6
+    rule_type                  = "Basic"
+  }
+  
+#end of smile-online config
+
+
+#start of create-online config
+
+  backend_address_pool {
+    fqdns = ["create-online-matchmakersoftware.azurewebsites.net"]
+    name  = "create-online-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "create-online-backendsetting"
+    port                  = 443
+    probe_name            = "create-online-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "create-online.matchmakersoftware.com"
+    name                           = "create-online-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "create-online-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "create-online-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "create-online-backendpool"
+    backend_http_settings_name = "create-online-backendsetting"
+    http_listener_name         = "create-online-listenerhttps"
+    name                       = "create-online-routingrule"
+    priority                   = 8
+    rule_type                  = "Basic"
+  }
+  
+#end of create-online config
   
   depends_on = [
     azurerm_user_assigned_identity.res-3,

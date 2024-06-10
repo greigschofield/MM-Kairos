@@ -61,17 +61,27 @@ resource "azurerm_windows_web_app" "azmmclientrg-webbapp-ir" {
   }
 
 }
+/**
 resource "azurerm_app_service_custom_hostname_binding" "azmmclientrg-custombinding-webapp-ir1" {
   app_service_name    = "ir-matchmakersoftware"
   hostname            = "ir-matchmakersoftware.azurewebsites.net"
   resource_group_name = "azmmclientapps"
 }
+*/
 
 resource "azurerm_app_service_custom_hostname_binding" "azmmclientrg-custombinding-webapp-ir2" {
   app_service_name    = "ir-matchmakersoftware"
   hostname            = "ir.matchmakersoftware.com"
   resource_group_name = "azmmclientapps"
+  
 }
+
+resource "azurerm_app_service_certificate_binding" "azmmclientrg-custombinding-cert-webapp-ir2" {
+  hostname_binding_id = azurerm_app_service_custom_hostname_binding.azmmclientrg-custombinding-webapp-ir2.id
+  certificate_id      = azurerm_app_service_certificate.azmmclientrg-365.id
+  ssl_state           = "SniEnabled"
+}
+
 
 resource "azurerm_monitor_smart_detector_alert_rule" "azmmclientrg-smartalert-webapp-ir" {
   description         = "Failure Anomalies notifies you of an unusual rise in the rate of failed HTTP requests or dependency calls."
