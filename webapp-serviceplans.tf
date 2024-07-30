@@ -41,3 +41,14 @@ resource "azurerm_service_plan" "webappsp4" {
     azurerm_resource_group.res-0,
   ]
 }
+
+resource "azurerm_service_plan" "webappsp5" {
+  location            = "northeurope"
+  name                = "AZMMASP05"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+  sku_name            = "S1"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}

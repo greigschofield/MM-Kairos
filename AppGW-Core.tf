@@ -89,7 +89,7 @@ sku {
     timeout             = 30
     unhealthy_threshold = 3
     match {
-      status_code = []
+      status_code = ["200-399"]
     }
   }
 
@@ -459,6 +459,163 @@ sku {
   }
   
 #end of create-online config
+
+#start of br config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["br-matchmakersoftware.azurewebsites.net"]
+    name  = "br-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "br-backendsetting"
+    port                  = 443
+    probe_name            = "br-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "br.matchmakersoftware.com"
+    name                           = "br-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "br-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "br-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "br-backendpool"
+    backend_http_settings_name = "br-backendsetting"
+    http_listener_name         = "br-listenerhttps"
+    name                       = "br-routingrule"
+    priority                   = 10
+    rule_type                  = "Basic"
+  }
+  
+#end of br config
+
+#start of pp config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["pp-matchmakersoftware.azurewebsites.net"]
+    name  = "pp-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "pp-backendsetting"
+    port                  = 443
+    probe_name            = "pp-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "pp.matchmakersoftware.com"
+    name                           = "pp-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "pp-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "pp-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "pp-backendpool"
+    backend_http_settings_name = "pp-backendsetting"
+    http_listener_name         = "pp-listenerhttps"
+    name                       = "pp-routingrule"
+    priority                   = 11
+    rule_type                  = "Basic"
+  }
+  
+#end of pp config
+
+#start of pioneer-online config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["pioneer-online-matchmakersoftware.azurewebsites.net"]
+    name  = "pioneer-online-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "pioneer-online-backendsetting"
+    port                  = 443
+    probe_name            = "pioneer-online-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "pioneer-online.matchmakersoftware.com"
+    name                           = "pioneer-online-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "pioneer-online-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "pioneer-online-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "pioneer-online-backendpool"
+    backend_http_settings_name = "pioneer-online-backendsetting"
+    http_listener_name         = "pioneer-online-listenerhttps"
+    name                       = "pioneer-online-routingrule"
+    priority                   = 12
+    rule_type                  = "Basic"
+  }
+  
+#end of pioneer-online config
+
   
   depends_on = [
     azurerm_user_assigned_identity.res-3,
