@@ -616,6 +616,58 @@ sku {
   
 #end of pioneer-online config
 
+
+#start of pioneer-auriga config
+
+  backend_address_pool {
+    fqdns = ["pioneer-auriga-matchmakersoftware.azurewebsites.net"]
+    name  = "pioneer-auriga-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "pioneer-auriga-backendsetting"
+    port                  = 443
+    probe_name            = "pioneer-auriga-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "pioneer-auriga.matchmakersoftware.com"
+    name                           = "pioneer-auriga-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "pioneer-auriga-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "pioneer-auriga-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "pioneer-auriga-backendpool"
+    backend_http_settings_name = "pioneer-auriga-backendsetting"
+    http_listener_name         = "pioneer-auriga-listenerhttps"
+    name                       = "pioneer-auriga-routingrule"
+    priority                   = 13
+    rule_type                  = "Basic"
+  }
+  
+#end of pioneer-auriga config
+
   
   depends_on = [
     azurerm_user_assigned_identity.res-3,
