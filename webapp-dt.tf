@@ -70,3 +70,4 @@ resource "azurerm_app_service_custom_hostname_binding" "azmmclientrg-188" {
     azurerm_windows_web_app.azmmclientrg-182,
   ]
 }
+#changed for new branch
