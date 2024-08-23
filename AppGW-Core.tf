@@ -668,6 +668,60 @@ sku {
   
 #end of pioneer-auriga config
 
+
+#start of HIE config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["HIE-matchmakersoftware.azurewebsites.net"]
+    name  = "HIE-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "HIE-backendsetting"
+    port                  = 443
+    probe_name            = "HIE-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "HIE.matchmakersoftware.com"
+    name                           = "HIE-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "HIE-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "HIE-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "HIE-backendpool"
+    backend_http_settings_name = "HIE-backendsetting"
+    http_listener_name         = "HIE-listenerhttps"
+    name                       = "HIE-routingrule"
+    priority                   = 14
+    rule_type                  = "Basic"
+  }
+  
+#end of HIE config
+
+
   
   depends_on = [
     azurerm_user_assigned_identity.res-3,
