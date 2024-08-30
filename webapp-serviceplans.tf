@@ -3,7 +3,7 @@ resource "azurerm_service_plan" "res-13" {
   name                = "AZMMASP01"
   os_type             = "Windows"
   resource_group_name = "AZMMCoreRG01"
-  sku_name            = "S1"
+  sku_name            = "P0v3"
   depends_on = [
     azurerm_resource_group.res-0,
   ]
