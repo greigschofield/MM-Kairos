@@ -722,6 +722,57 @@ sku {
 #end of HIE config
 
 
+#start of psg-training config
+
+
+  backend_address_pool {
+    fqdns = ["psg-training-matchmakersoftware.azurewebsites.net"]
+    name  = "psg-training-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "psg-training-backendsetting"
+    port                  = 443
+    probe_name            = "psg-training-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "psg-training.matchmakersoftware.com"
+    name                           = "psg-training-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "psg-training-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "psg-training-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "psg-training-backendpool"
+    backend_http_settings_name = "psg-training-backendsetting"
+    http_listener_name         = "psg-training-listenerhttps"
+    name                       = "psg-training-routingrule"
+    priority                   = 16
+    rule_type                  = "Basic"
+  }
+  
+#end of psg-training config
   
   depends_on = [
     azurerm_user_assigned_identity.res-3,
