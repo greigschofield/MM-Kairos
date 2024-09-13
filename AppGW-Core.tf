@@ -773,7 +773,115 @@ sku {
   }
   
 #end of psg-training config
+
+#find and replace pro-nursing
+#merge into app-gw-core file
+#start of pro-nursing config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["pro-nursing-matchmakersoftware.azurewebsites.net"]
+    name  = "pro-nursing-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "pro-nursing-backendsetting"
+    port                  = 443
+    probe_name            = "pro-nursing-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "pro-nursing.matchmakersoftware.com"
+    name                           = "pro-nursing-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "pro-nursing-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "pro-nursing-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "pro-nursing-backendpool"
+    backend_http_settings_name = "pro-nursing-backendsetting"
+    http_listener_name         = "pro-nursing-listenerhttps"
+    name                       = "pro-nursing-routingrule"
+    priority                   = 17
+    rule_type                  = "Basic"
+  }
   
+#end of pro-nursing config
+  
+#find and replace jobsworth
+#merge into app-gw-core file
+#start of jobsworth config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["jobsworth-matchmakersoftware.azurewebsites.net"]
+    name  = "jobsworth-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "jobsworth-backendsetting"
+    port                  = 443
+    probe_name            = "jobsworth-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "jobsworth.matchmakersoftware.com"
+    name                           = "jobsworth-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "jobsworth-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "jobsworth-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "jobsworth-backendpool"
+    backend_http_settings_name = "jobsworth-backendsetting"
+    http_listener_name         = "jobsworth-listenerhttps"
+    name                       = "jobsworth-routingrule"
+    priority                   = 18
+    rule_type                  = "Basic"
+  }
+  
+#end of jobsworth config
+
   depends_on = [
     azurerm_user_assigned_identity.res-3,
     azurerm_public_ip.res-8,
