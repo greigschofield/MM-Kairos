@@ -882,6 +882,114 @@ sku {
   
 #end of jobsworth config
 
+
+#start of clockworkedu config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["clockworkedu-matchmakersoftware.azurewebsites.net"]
+    name  = "clockworkedu-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "clockworkedu-backendsetting"
+    port                  = 443
+    probe_name            = "clockworkedu-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "clockworkedu.matchmakersoftware.com"
+    name                           = "clockworkedu-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "clockworkedu-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "clockworkedu-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "clockworkedu-backendpool"
+    backend_http_settings_name = "clockworkedu-backendsetting"
+    http_listener_name         = "clockworkedu-listenerhttps"
+    name                       = "clockworkedu-routingrule"
+    priority                   = 21
+    rule_type                  = "Basic"
+  }
+  
+#end of clockworkedu config
+
+
+#find and replace supplystar
+#merge into app-gw-core file
+#start of supplystar config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["supplystar-matchmakersoftware.azurewebsites.net"]
+    name  = "supplystar-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "supplystar-backendsetting"
+    port                  = 443
+    probe_name            = "supplystar-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "supplystar.matchmakersoftware.com"
+    name                           = "supplystar-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "supplystar-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "supplystar-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "supplystar-backendpool"
+    backend_http_settings_name = "supplystar-backendsetting"
+    http_listener_name         = "supplystar-listenerhttps"
+    name                       = "supplystar-routingrule"
+    priority                   = 22
+    rule_type                  = "Basic"
+  }
+  
+#end of supplystar config
+
   depends_on = [
     azurerm_user_assigned_identity.res-3,
     azurerm_public_ip.res-8,
