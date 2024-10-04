@@ -990,6 +990,116 @@ sku {
   
 #end of supplystar config
 
+
+#find and replace clockwork-online
+#merge into app-gw-core file
+#start of clockwork-online config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["clockwork-online-matchmakersoftware.azurewebsites.net"]
+    name  = "clockwork-online-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "clockwork-online-backendsetting"
+    port                  = 443
+    probe_name            = "clockwork-online-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "clockwork-online.matchmakersoftware.com"
+    name                           = "clockwork-online-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "clockwork-online-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "clockwork-online-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "clockwork-online-backendpool"
+    backend_http_settings_name = "clockwork-online-backendsetting"
+    http_listener_name         = "clockwork-online-listenerhttps"
+    name                       = "clockwork-online-routingrule"
+    priority                   = 23
+    rule_type                  = "Basic"
+  }
+  
+#end of clockwork-online config
+
+
+#find and replace pronursing-auriga
+#merge into app-gw-core file
+#start of pronursing-auriga config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["pronursing-auriga-matchmakersoftware.azurewebsites.net"]
+    name  = "pronursing-auriga-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "pronursing-auriga-backendsetting"
+    port                  = 443
+    probe_name            = "pronursing-auriga-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "pronursing-auriga.matchmakersoftware.com"
+    name                           = "pronursing-auriga-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "pronursing-auriga-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "pronursing-auriga-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "pronursing-auriga-backendpool"
+    backend_http_settings_name = "pronursing-auriga-backendsetting"
+    http_listener_name         = "pronursing-auriga-listenerhttps"
+    name                       = "pronursing-auriga-routingrule"
+    priority                   = 24
+    rule_type                  = "Basic"
+  }
+  
+#end of pronursing-auriga config
+
   depends_on = [
     azurerm_user_assigned_identity.res-3,
     azurerm_public_ip.res-8,

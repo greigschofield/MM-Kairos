@@ -63,3 +63,25 @@ resource "azurerm_service_plan" "webappsp6" {
     azurerm_resource_group.res-0,
   ]
 }
+
+resource "azurerm_service_plan" "webappsp7" {
+  location            = "northeurope"
+  name                = "AZMMASP07"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+  sku_name            = "S1"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}
+
+resource "azurerm_service_plan" "webappsp8" {
+  location            = "northeurope"
+  name                = "AZMMASP08"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+  sku_name            = "S1"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}
