@@ -85,3 +85,47 @@ resource "azurerm_service_plan" "webappsp8" {
     azurerm_resource_group.res-0,
   ]
 }
+
+resource "azurerm_service_plan" "webappsp9" {
+  location            = "northeurope"
+  name                = "AZMMASP09"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+ sku_name             = "P0v3"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}
+
+resource "azurerm_service_plan" "webappsp10" {
+  location            = "northeurope"
+  name                = "AZMMASP10"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+ sku_name             = "S1"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}
+
+resource "azurerm_service_plan" "webappsp11" {
+  location            = "northeurope"
+  name                = "AZMMASP11"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+ sku_name             = "P0v3"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}
+
+resource "azurerm_service_plan" "webappsp12" {
+  location            = "northeurope"
+  name                = "AZMMASP12"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+ sku_name             = "S1"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}

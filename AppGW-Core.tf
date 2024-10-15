@@ -721,7 +721,7 @@ sku {
   
 #end of HIE config
 
-
+/**
 #start of psg-training config
 
 
@@ -773,6 +773,9 @@ sku {
   }
   
 #end of psg-training config
+
+*/ 
+#psg-training removed by request from Dharmesh 15/10
 
 #find and replace pro-nursing
 #merge into app-gw-core file
@@ -1099,6 +1102,335 @@ sku {
   }
   
 #end of pronursing-auriga config
+
+#find and replace psgtraining
+#merge into app-gw-core file
+#start of psgtraining config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["psgtraining-matchmakersoftware.azurewebsites.net"]
+    name  = "psgtraining-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "psgtraining-backendsetting"
+    port                  = 443
+    probe_name            = "psgtraining-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "psgtraining.matchmakersoftware.com"
+    name                           = "psgtraining-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "psgtraining-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "psgtraining-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "psgtraining-backendpool"
+    backend_http_settings_name = "psgtraining-backendsetting"
+    http_listener_name         = "psgtraining-listenerhttps"
+    name                       = "psgtraining-routingrule"
+    priority                   = 25
+    rule_type                  = "Basic"
+  }
+  
+#end of psgtraining config
+
+
+#find and replace psgtraining-online
+#merge into app-gw-core file
+#start of psgtraining-online config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["psgtraining-online-matchmakersoftware.azurewebsites.net"]
+    name  = "psgtraining-online-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "psgtraining-online-backendsetting"
+    port                  = 443
+    probe_name            = "psgtraining-online-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "psgtraining-online.matchmakersoftware.com"
+    name                           = "psgtraining-online-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "psgtraining-online-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "psgtraining-online-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "psgtraining-online-backendpool"
+    backend_http_settings_name = "psgtraining-online-backendsetting"
+    http_listener_name         = "psgtraining-online-listenerhttps"
+    name                       = "psgtraining-online-routingrule"
+    priority                   = 26
+    rule_type                  = "Basic"
+  }
+  
+#end of psgtraining-online config
+
+
+#find and replace autoexperts
+#merge into app-gw-core file
+#start of autoexperts config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["autoexperts-matchmakersoftware.azurewebsites.net"]
+    name  = "autoexperts-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "autoexperts-backendsetting"
+    port                  = 443
+    probe_name            = "autoexperts-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "autoexperts.matchmakersoftware.com"
+    name                           = "autoexperts-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "autoexperts-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "autoexperts-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "autoexperts-backendpool"
+    backend_http_settings_name = "autoexperts-backendsetting"
+    http_listener_name         = "autoexperts-listenerhttps"
+    name                       = "autoexperts-routingrule"
+    priority                   = 27
+    rule_type                  = "Basic"
+  }
+  
+#end of autoexperts config
+
+
+#find and replace nowedu-training
+#merge into app-gw-core file
+#start of nowedu-training config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["nowedu-training-matchmakersoftware.azurewebsites.net"]
+    name  = "nowedu-training-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "nowedu-training-backendsetting"
+    port                  = 443
+    probe_name            = "nowedu-training-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "nowedu-training.matchmakersoftware.com"
+    name                           = "nowedu-training-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "nowedu-training-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "nowedu-training-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "nowedu-training-backendpool"
+    backend_http_settings_name = "nowedu-training-backendsetting"
+    http_listener_name         = "nowedu-training-listenerhttps"
+    name                       = "nowedu-training-routingrule"
+    priority                   = 28
+    rule_type                  = "Basic"
+  }
+  
+#end of nowedu-training config
+
+
+#find and replace chasetaylor
+#merge into app-gw-core file
+#start of chasetaylor config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["chasetaylor-matchmakersoftware.azurewebsites.net"]
+    name  = "chasetaylor-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "chasetaylor-backendsetting"
+    port                  = 443
+    probe_name            = "chasetaylor-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "chasetaylor.matchmakersoftware.com"
+    name                           = "chasetaylor-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "chasetaylor-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "chasetaylor-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "chasetaylor-backendpool"
+    backend_http_settings_name = "chasetaylor-backendsetting"
+    http_listener_name         = "chasetaylor-listenerhttps"
+    name                       = "chasetaylor-routingrule"
+    priority                   = 29
+    rule_type                  = "Basic"
+  }
+  
+#end of chasetaylor config
+
+
+#find and replace autoexperts-online
+#merge into app-gw-core file
+#start of autoexperts-online config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["autoexperts-online-matchmakersoftware.azurewebsites.net"]
+    name  = "autoexperts-online-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "autoexperts-online-backendsetting"
+    port                  = 443
+    probe_name            = "autoexperts-online-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "autoexperts-online.matchmakersoftware.com"
+    name                           = "autoexperts-online-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "autoexperts-online-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "autoexperts-online-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "autoexperts-online-backendpool"
+    backend_http_settings_name = "autoexperts-online-backendsetting"
+    http_listener_name         = "autoexperts-online-listenerhttps"
+    name                       = "autoexperts-online-routingrule"
+    priority                   = 30
+    rule_type                  = "Basic"
+  }
+  
+#end of autoexperts-online config
 
   depends_on = [
     azurerm_user_assigned_identity.res-3,
