@@ -14,7 +14,7 @@ resource "azurerm_service_plan" "webappsp2" {
   name                = "AZMMASP02"
   os_type             = "Windows"
   resource_group_name = "AZMMCoreRG01"
-  sku_name            = "P0v3"
+  sku_name            = "P1v3"
   depends_on = [
     azurerm_resource_group.res-0,
   ]
