@@ -129,3 +129,25 @@ resource "azurerm_service_plan" "webappsp12" {
     azurerm_resource_group.res-0,
   ]
 }
+
+resource "azurerm_service_plan" "webappsp13" {
+  location            = "northeurope"
+  name                = "AZMMASP13"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+  sku_name            = "P0v3"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}
+
+resource "azurerm_service_plan" "webappsp14" {
+  location            = "northeurope"
+  name                = "AZMMASP14"
+  os_type             = "Windows"
+  resource_group_name = "AZMMCoreRG01"
+ sku_name             = "S1"
+  depends_on = [
+    azurerm_resource_group.res-0,
+  ]
+}

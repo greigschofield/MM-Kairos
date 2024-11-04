@@ -1432,6 +1432,227 @@ sku {
   
 #end of autoexperts-online config
 
+
+#find and replace vantage
+#merge into app-gw-core file
+#start of vantage config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["vantage-matchmakersoftware.azurewebsites.net"]
+    name  = "vantage-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "vantage-backendsetting"
+    port                  = 443
+    probe_name            = "vantage-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "vantage.matchmakersoftware.com"
+    name                           = "vantage-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "vantage-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "vantage-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "vantage-backendpool"
+    backend_http_settings_name = "vantage-backendsetting"
+    http_listener_name         = "vantage-listenerhttps"
+    name                       = "vantage-routingrule"
+    priority                   = 31
+    rule_type                  = "Basic"
+  }
+  
+#end of vantage config
+
+
+#find and replace nowedu-online
+#merge into app-gw-core file
+#start of nowedu-online config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["nowedu-online-matchmakersoftware.azurewebsites.net"]
+    name  = "nowedu-online-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "nowedu-online-backendsetting"
+    port                  = 443
+    probe_name            = "nowedu-online-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "nowedu-online.matchmakersoftware.com"
+    name                           = "nowedu-online-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "nowedu-online-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "nowedu-online-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "nowedu-online-backendpool"
+    backend_http_settings_name = "nowedu-online-backendsetting"
+    http_listener_name         = "nowedu-online-listenerhttps"
+    name                       = "nowedu-online-routingrule"
+    priority                   = 32
+    rule_type                  = "Basic"
+  }
+  
+#end of nowedu-online config
+
+
+#find and replace nowedu
+#merge into app-gw-core file
+#start of nowedu config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["nowedu-matchmakersoftware.azurewebsites.net"]
+    name  = "nowedu-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "nowedu-backendsetting"
+    port                  = 443
+    probe_name            = "nowedu-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "nowedu.matchmakersoftware.com"
+    name                           = "nowedu-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "nowedu-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "nowedu-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "nowedu-backendpool"
+    backend_http_settings_name = "nowedu-backendsetting"
+    http_listener_name         = "nowedu-listenerhttps"
+    name                       = "nowedu-routingrule"
+    priority                   = 33
+    rule_type                  = "Basic"
+  }
+  
+#end of nowedu config
+
+
+#find and replace nowedu-auriga
+#merge into app-gw-core file
+#start of nowedu-auriga config
+#change the priority to a unique number
+
+  backend_address_pool {
+    fqdns = ["nowedu-auriga-matchmakersoftware.azurewebsites.net"]
+    name  = "nowedu-auriga-backendpool"
+  }
+
+  backend_http_settings {
+    affinity_cookie_name  = "ApplicationGatewayAffinity"
+    cookie_based_affinity = "Enabled"
+    name                  = "nowedu-auriga-backendsetting"
+    port                  = 443
+    probe_name            = "nowedu-auriga-healthprobe"
+    protocol              = "Https"
+    request_timeout       = 20
+  }
+
+  http_listener {
+    frontend_ip_configuration_name = "appGwPublicFrontendIpIPv4"
+    frontend_port_name             = "port_443"
+    host_name                      = "nowedu-auriga.matchmakersoftware.com"
+    name                           = "nowedu-auriga-listenerhttps"
+    protocol                       = "Https"
+    require_sni                    = true
+    ssl_certificate_name           = "MMWildcard2024"
+  }
+
+  probe {
+    host                = "nowedu-auriga-matchmakersoftware.azurewebsites.net"
+    interval            = 30
+    name                = "nowedu-auriga-healthprobe"
+    path                = "/"
+    protocol            = "Https"
+    timeout             = 30
+    unhealthy_threshold = 3
+    match {
+      status_code = ["200-399"]
+    }
+  }
+
+  request_routing_rule {
+    backend_address_pool_name  = "nowedu-auriga-backendpool"
+    backend_http_settings_name = "nowedu-auriga-backendsetting"
+    http_listener_name         = "nowedu-auriga-listenerhttps"
+    name                       = "nowedu-auriga-routingrule"
+    priority                   = 34
+    rule_type                  = "Basic"
+  }
+  
+#end of nowedu-auriga config
+
+
   depends_on = [
     azurerm_user_assigned_identity.res-3,
     azurerm_public_ip.res-8,
